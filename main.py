@@ -29,7 +29,8 @@ while True:
         os.system('cls') 
     
     elif opcao == '2':
-        print(listar_produtos(estoque))
+        for id, produto in listar_produtos(estoque).items():
+            print('ID:', id, 'Nome:', produto['nome'], 'Quantidade:', produto['quantidade'], 'Preço:', produto['preco'], 'Categoria:', produto['categoria'], 'Estoque Minimo:', produto['estoque_minimo'])
         input('Pressione ENTER para continuar...')
         os.system('cls')  
 
