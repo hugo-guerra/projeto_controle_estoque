@@ -13,3 +13,10 @@ def buscar_produto(estoque, id):
         return estoque[id]
     else:
         return None
+    
+def atualizar_quantidade(estoque, id, quantidade):
+    if id in estoque:
+        estoque[id]['quantidade'] += quantidade
+        return True
+    else:
+        return False
