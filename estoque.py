@@ -20,3 +20,10 @@ def atualizar_quantidade(estoque, id, quantidade):
         return True
     else:
         return False
+
+def remover_produto(estoque, id):
+    if id in estoque:
+        estoque.pop(id)
+        return True
+    else:
+        return False
