@@ -11,3 +11,7 @@ def carregar_dados():
         return dados
     
     else: return {}
+
+def salvar_dados(dados):
+    with open(estoque, 'w') as arquivo:
+        json.dump(dados, arquivo)
