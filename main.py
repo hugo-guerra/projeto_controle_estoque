@@ -19,12 +19,14 @@ while True:
         produto_id = input('ID a ser cadastrado: ')
         nome_produto = input('Nome do produto a ser cadastrado: ')
         quantidade_produto = int(input('Quantidade a ser cadastrado: '))
-        preco_protudo = float(input('Preço do produto a ser cadastrado:'))
+        preco_protudo = float(input('Preço do produto a ser cadastrado: R$'))
         categoria_produto = input('Categoria a ser cadastrado:')
         estoque_minimo = int(input('Quantidade minima: '))
 
         cadastrar_produto(estoque, produto_id, nome_produto, quantidade_produto, preco_protudo, categoria_produto, estoque_minimo)
         salvar_dados(estoque)
+        input('Pressione ENTER para continuar...')
+        os.system('cls') 
     
     elif opcao == '2':
         print(listar_produtos(estoque))
@@ -43,6 +45,8 @@ while True:
 
         atualizar_quantidade(estoque, id_produto, quantidade)
         salvar_dados(estoque)
+        input('Pressione ENTER para continuar...')
+        os.system('cls') 
 
     elif opcao == '5':
         id_do_produto = input('Qual o ID do produto que deseja remover: ')
