@@ -1,1 +1,1 @@
-{"001": {"nome": "Caderno", "quantidade": 5}}
+{"1": {"nome": "Celular", "quantidade": 6, "preco": 600.0, "categoria": "Aparelho celular", "estoque_minimo": 5}}

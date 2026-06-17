@@ -1,5 +1,6 @@
 from estoque import cadastrar_produto, listar_produtos, buscar_produto, atualizar_quantidade, remover_produto, verificar_estoque_baixo
 from armazenamento import carregar_dados, salvar_dados
+import os
 
 estoque = carregar_dados()
 
@@ -27,10 +28,14 @@ while True:
     
     elif opcao == '2':
         print(listar_produtos(estoque))
+        input('Pressione ENTER para continuar...')
+        os.system('cls')  
 
     elif opcao == '3':
         id_busca = input('Qual ID deseja buscar: ')
         print(buscar_produto(estoque, id_busca))
+        input('Pressione ENTER para continuar...')
+        os.system('cls')  
 
     elif opcao == '4':
         id_produto = input('Qual o ID do produto: ')
@@ -47,9 +52,11 @@ while True:
 
     elif opcao == '6':
         print(verificar_estoque_baixo(estoque))
+        input('Pressione ENTER para continuar...')
+        os.system('cls')  
 
     elif opcao == '7':
         break
     
     else: 
-        print('Opção invalida!')
+        print('Opção invalida!')  
