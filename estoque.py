@@ -7,3 +7,9 @@ def cadastrar_produto(estoque, id, nome, quantidade, preco, categoria, estoque_m
     
 def listar_produtos(estoque):
     return estoque
+
+def buscar_produto(estoque, id):
+    if id in estoque:
+        return estoque[id]
+    else:
+        return None
