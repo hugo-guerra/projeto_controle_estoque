@@ -27,3 +27,11 @@ def remover_produto(estoque, id):
         return True
     else:
         return False
+    
+def verificar_estoque_baixo(estoque):
+    alertas = []
+
+    for id, produto in estoque.items():
+        if produto['quantidade'] <= produto['estoque_minimo']:
+            alertas.append((id, produto))
+    return alertas
