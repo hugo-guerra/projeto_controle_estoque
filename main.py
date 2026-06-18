@@ -70,9 +70,15 @@ while True:
     elif opcao == '5':
         id_do_produto = input('Qual o ID do produto que deseja remover: ')
 
-        remover_produto(estoque, id_do_produto)
-        salvar_dados(estoque)
-        input('Item removido com sucesso, pressione ENTER para continuar...')
+        remover = remover_produto(estoque, id_do_produto)
+
+        if remover == True:
+            print('Item removido com sucesso!')
+            salvar_dados(estoque)
+        else:
+            print('Aconteceu alguma coisa de errado, falha ao remover item desejado.')
+
+        input('Aperte ENTER para continuar...')
         os.system('cls') 
 
     elif opcao == '6':
