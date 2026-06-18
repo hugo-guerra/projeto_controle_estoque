@@ -56,9 +56,15 @@ while True:
         id_produto = input('Qual o ID do produto: ')
         quantidade = int(input('Informe a quantidade que deseja: '))
 
-        atualizar_quantidade(estoque, id_produto, quantidade)
-        salvar_dados(estoque)
-        input('Atualização bem sucedida, pressione ENTER para continuar...')
+        atualizar = atualizar_quantidade(estoque, id_produto, quantidade)
+
+        if atualizar == True:
+            print('O produto foi atualizado com exatidão!')
+            salvar_dados(estoque)
+        else:
+            print('Alguma coisa deu errado, tente novamente atentamente!')
+
+        input('Aperte ENTER para continuar...')
         os.system('cls') 
 
     elif opcao == '5':
