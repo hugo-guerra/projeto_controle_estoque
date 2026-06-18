@@ -44,10 +44,12 @@ while True:
         id_busca = input('Qual ID deseja buscar: ')
         buscar = buscar_produto(estoque, id_busca)
 
-        if buscar == None:
-            
+        if buscar != None:
+            print('ID:', id_busca, 'Nome:', buscar['nome'], 'Quantidade:', buscar['quantidade'], 'Preço:', buscar['preco'], 'Categoria:', buscar['categoria'], 'Estoque Minimo:', buscar['estoque_minimo'])
+        else:
+            print('Ocorreu um erro produto não encontrado, tente novamente com um valor valido!')
 
-        input('Item encontrado, pressione ENTER para continuar...')
+        input('Aperte ENTER para continuar...')
         os.system('cls')  
 
     elif opcao == '4':
