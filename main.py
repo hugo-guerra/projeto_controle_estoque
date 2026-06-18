@@ -25,19 +25,19 @@ while True:
 
         cadastrar_produto(estoque, produto_id, nome_produto, quantidade_produto, preco_protudo, categoria_produto, estoque_minimo)
         salvar_dados(estoque)
-        input('Pressione ENTER para continuar...')
+        input('Item cadastrado com sucesso, pressione ENTER para continuar...')
         os.system('cls') 
     
     elif opcao == '2':
         for id, produto in listar_produtos(estoque).items():
             print('ID:', id, 'Nome:', produto['nome'], 'Quantidade:', produto['quantidade'], 'Preço:', produto['preco'], 'Categoria:', produto['categoria'], 'Estoque Minimo:', produto['estoque_minimo'])
-        input('Pressione ENTER para continuar...')
+        input('Listagem total feita, pressione ENTER para continuar...')
         os.system('cls')  
 
     elif opcao == '3':
         id_busca = input('Qual ID deseja buscar: ')
         print(buscar_produto(estoque, id_busca))
-        input('Pressione ENTER para continuar...')
+        input('Item encontrado, pressione ENTER para continuar...')
         os.system('cls')  
 
     elif opcao == '4':
@@ -46,7 +46,7 @@ while True:
 
         atualizar_quantidade(estoque, id_produto, quantidade)
         salvar_dados(estoque)
-        input('Pressione ENTER para continuar...')
+        input('Atualização bem sucedida, pressione ENTER para continuar...')
         os.system('cls') 
 
     elif opcao == '5':
@@ -54,6 +54,8 @@ while True:
 
         remover_produto(estoque, id_do_produto)
         salvar_dados(estoque)
+        input('Item removido com sucesso, pressione ENTER para continuar...')
+        os.system('cls') 
 
     elif opcao == '6':
         print(verificar_estoque_baixo(estoque))
