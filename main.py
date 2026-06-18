@@ -23,9 +23,15 @@ while True:
         categoria_produto = input('Categoria a ser cadastrado:')
         estoque_minimo = int(input('Quantidade minima: '))
 
-        cadastrar_produto(estoque, produto_id, nome_produto, quantidade_produto, preco_protudo, categoria_produto, estoque_minimo)
+        resultado = cadastrar_produto(estoque, produto_id, nome_produto, quantidade_produto, preco_protudo, categoria_produto, estoque_minimo)
         salvar_dados(estoque)
-        input('Item cadastrado com sucesso, pressione ENTER para continuar...')
+
+        if resultado == True:
+            print('Produto/Item cadastrado com sucesso!!!')
+        else:
+            print('Esté ID já está cadastrado, por favor tente outro.')
+
+        input('Aperte ENTER para continuar...')
         os.system('cls') 
     
     elif opcao == '2':
@@ -36,7 +42,11 @@ while True:
 
     elif opcao == '3':
         id_busca = input('Qual ID deseja buscar: ')
-        print(buscar_produto(estoque, id_busca))
+        buscar = buscar_produto(estoque, id_busca)
+
+        if buscar == None:
+            
+
         input('Item encontrado, pressione ENTER para continuar...')
         os.system('cls')  
 
